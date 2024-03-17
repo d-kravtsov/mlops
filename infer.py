@@ -6,8 +6,8 @@ import omegaconf
 import pandas as pd
 import torch
 
-from src.module import KWS
-from utils import omegaconf_extension
+from asr.models import QuartzNetCTC
+from asr.utils import omegaconf_extension
 
 
 @omegaconf_extension
@@ -16,7 +16,7 @@ def main(conf: omegaconf.DictConfig) -> None:
 
     os.chdir(hydra.utils.get_original_cwd())
 
-    module = KWS(conf)
+    model = QuartzNetCTC(conf)
     if conf.init_weights:
         ckpt = torch.load(conf.init_weights, map_location="cpu")
         module.load_state_dict(ckpt["state_dict"])

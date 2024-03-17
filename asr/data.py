@@ -5,7 +5,7 @@ import torchaudio
 import sentencepiece
 import pandas as pd
 
-from src.transforms import get_transform
+from asr.transforms import get_transform
 
 
 class ASRDataset(torch.utils.data.Dataset):

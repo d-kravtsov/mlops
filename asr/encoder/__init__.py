@@ -1,2 +1,2 @@
-from src.encoder.quartznet import QuartzNet
-from src.encoder.conformer import Conformer
+from asr.encoder.quartznet import QuartzNet
+from asr.encoder.conformer import Conformer

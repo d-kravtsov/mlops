@@ -5,11 +5,11 @@ import torch
 from torch import nn
 import pytorch_lightning as pl
 
-from src.encoder.conformer import Conformer
-from src.decoder.las import TransformerDecoder
-from src.metrics import WER
-from src.data import ASRDatasetBPE, collate_fn
-from src.optim import get_scheduler, get_optimizer
+from asr.encoder.conformer import Conformer
+from asr.decoder.las import TransformerDecoder
+from asr.metrics import WER
+from asr.data import ASRDatasetBPE, collate_fn
+from asr.optim import get_scheduler, get_optimizer
 
 
 logger = logging.getLogger("lightning")

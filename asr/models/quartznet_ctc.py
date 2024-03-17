@@ -5,11 +5,11 @@ import torch
 from torch import nn
 import pytorch_lightning as pl
 
-from src.encoder import QuartzNet
-from src.decoder import ConvDecoder
-from src.metrics import WER
-from src.data import ASRDataset, ASRDatasetBPE, collate_fn
-from src.optim import get_scheduler, get_optimizer
+from asr.encoder import QuartzNet
+from asr.decoder import ConvDecoder
+from asr.metrics import WER
+from asr.data import ASRDataset, ASRDatasetBPE, collate_fn
+from asr.optim import get_scheduler, get_optimizer
 
 
 logger = logging.getLogger("lightning")

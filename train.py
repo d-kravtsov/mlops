@@ -5,7 +5,7 @@ import omegaconf
 import torch
 import pytorch_lightning as pl
 
-from src.models import QuartzNetCTC
+from asr.models import QuartzNetCTC
 
 
 @hydra.main(config_path="conf", config_name="quarznet_5x5_ru")
